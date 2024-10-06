@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# News Panda
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+News Panda is a responsive news web application built with React, HTML, Bootstrap, and CSS, that fetches real-time news using the News API. Users can browse through various categories of news including business, entertainment, health, science, sports, and technology, with the option to load more articles through infinite scrolling.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Real-time News**: Fetches top headlines from the [News API](https://newsapi.org/).
+- **Category-based Browsing**: Filter news by categories such as General, Business, Entertainment, Health, Science, Sports, and Technology.
+- **Infinite Scroll**: Loads more articles as the user scrolls down the page.
+- **Responsive Design**: Built with Bootstrap and fully responsive across different devices.
+- **Progress Bar**: Displays loading progress while fetching news.
+- **Article Details**: Displays news article information such as title, description, author, source, and publication date.
 
-### `npm start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: Frontend JavaScript library used to build the user interface.
+- **Bootstrap**: Used for responsive layouts and design elements.
+- **CSS**: Custom styles for enhancing the user interface.
+- **News API**: External API for fetching news articles.
+- **React Infinite Scroll Component**: For implementing infinite scrolling in the app.
+- **React Router**: For routing between different categories of news.
+- **react-top-loading-bar**: For displaying a top progress bar while news is loading.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/jai-singh5/News-Panda.git
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Navigate to the project directory**:
+   ```bash
+   cd news-panda
+   ```
 
-### `npm run build`
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```   
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Get an API Key from [News API](https://newsapi.org/).  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. **Create a .env file in the root directory and add your News API key**:
+   ```bash
+   REACT_APP_NEWS_API=<your_news_api_key>
+   ``` 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. **Run the app**:
+    ```bash
+   npm start
+   ``` 
 
-### `npm run eject`
+7. The app will run at http://localhost:3000/.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dependencies
+The project uses the following dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **react**: ^17.0.2
+- **react-dom**: ^17.0.2
+- **react-router-dom**: ^6.0.0
+- **react-infinite-scroll-component**: ^6.1.0
+- **react-top-loading-bar**: ^2.0.0
+- **bootstrap**: ^5.1.3
+- **prop-types**: ^15.7.2
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
 
-## Learn More
+- If you'd like to contribute to this project, feel free to fork the repository and submit a pull request.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Code Splitting
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [News API](https://newsapi.org/) for providing free access to news articles.
+- [Bootstrap](https://getbootstrap.com/) for providing a responsive front-end framework.
+- [React](https://react.dev/) for building a fast and interactive UI.
