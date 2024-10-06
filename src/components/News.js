@@ -21,7 +21,6 @@ const News = ({ apiKey, country = 'us', pageSize = 8, category = 'general', setP
             let data = await fetch(url);
             setProgress(30);
             let parsedData = await data.json();
-            console.log("API Response:", parsedData);
             setProgress(70);
             setArticles(parsedData.articles);
             setTotalResults(parsedData.totalResults);
@@ -34,7 +33,7 @@ const News = ({ apiKey, country = 'us', pageSize = 8, category = 'general', setP
     }
 
     useEffect(() => {
-        document.title = `${capitalizeFirstLetter(category)} - NewsMonkey`;
+        document.title = `${capitalizeFirstLetter(category)} - New Panda`;
         updateNews();
         // eslint-disable-next-line
     }, []);
@@ -54,34 +53,36 @@ const News = ({ apiKey, country = 'us', pageSize = 8, category = 'general', setP
 
     return (
         <>
-            <h1 className="text-center" style={{ margin: '35px 0px', marginTop: '90px' }}>NewsMonkey - Top {capitalizeFirstLetter(category)} Headlines</h1>
-            {loading && <Spinner />}
-            <InfiniteScroll
-                dataLength={articles.length}
-                next={fetchMoreData}
-                hasMore={articles.length !== totalResults}
-                loader={<Spinner />}
-            >
-                <div className="container">
-                    <div className="row">
-                        {articles.map((element) => {
-                            return (
-                                <div className="col-md-4" key={element.url}>
-                                    <NewsItem
-                                        title={element.title ? element.title : ""}
-                                        description={element.description ? element.description : ""}
-                                        imageUrl={element.urlToImage}
-                                        newsUrl={element.url}
-                                        author={element.author}
-                                        date={element.publishedAt}
-                                        source={element.source.name}
-                                    />
-                                </div>
-                            );
-                        })}
+            <div className="news-background"> 
+                <h1 className="text-center" style={{ margin: '35px 0px', marginTop: '56px' }}>News Panda - Top {capitalizeFirstLetter(category)} Headlines</h1>
+                {loading && <Spinner />}
+                <InfiniteScroll
+                    dataLength={articles.length}
+                    next={fetchMoreData}
+                    hasMore={articles.length !== totalResults}
+                    loader={<Spinner />}
+                >
+                    <div className="container">
+                        <div className="row">
+                            {articles.map((element) => {
+                                return (
+                                    <div className="col-md-4" key={element.url}>
+                                        <NewsItem
+                                            title={element.title ? element.title : ""}
+                                            description={element.description ? element.description : ""}
+                                            imageUrl={element.urlToImage}
+                                            newsUrl={element.url}
+                                            author={element.author}
+                                            date={element.publishedAt}
+                                            source={element.source.name}
+                                        />
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
-                </div>
-            </InfiniteScroll>
+                </InfiniteScroll>
+            </div>
         </>
     );
 };

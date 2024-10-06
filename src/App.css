@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.news-background {
+  background-color: #C3C8C4;
+  min-height: 100vh; /* Ensures it covers the full page height */
+}
